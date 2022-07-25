@@ -1,0 +1,16 @@
+.btn {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	padding-block: .75em;
+	border: none;
+	border-radius: calc(var(--border-radius) / 2);
+	background-color: var(--text-clr);
+	color: var(--container-clr);
+	font-size: var(--body-fs);
+	cursor: pointer;
+}
+
+.btn-large {
+	width: 100%;
+}

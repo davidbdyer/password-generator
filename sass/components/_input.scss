@@ -1,0 +1,14 @@
+@use '../abstracts' as *;
+
+input[type='number'] {
+	text-align: center;
+}
+
+input[type='checkbox'] {
+	transform: scale(1.5) translateX(-30%);
+	accent-color: var(--accent-clr);
+
+	@media (min-width: $lg) {
+		transform: scale(2) translateX(-30%);
+	}
+}

@@ -1,0 +1,22 @@
+:root {
+	--heading-fs: clamp(1.9rem, 4vw, 7rem);
+	--border-radius: 0.5rem;
+	--font-family: 'Muli', sans-serif;
+	--body-fs: clamp(1rem, 2vw, 2rem);
+	--spacing: 0.5em;
+	--spaceing-resp: clamp(1.25rem, 4vw, 4rem);
+
+	@media (prefers-color-scheme: light) {
+		--bg-clr: #6096ba;
+		--container-clr: #e7ecef;
+		--result-bg: white;
+		--text-clr: #274c77;
+		--text-result-clr: var(--text-clr);
+	}
+
+	--bg-clr: #586f7c;
+	--container-clr: #2f4550;
+	--result-bg: white;
+	--text-clr: #f4f4f9;
+	--text-result-clr: var(--container-clr);
+}

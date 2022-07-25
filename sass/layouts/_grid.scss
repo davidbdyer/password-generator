@@ -1,0 +1,5 @@
+.grid {
+	--gap: var(--spacing);
+	display: grid;
+	gap: var(--gap);
+}

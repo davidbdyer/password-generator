@@ -1,0 +1,6 @@
+@use '../layouts';
+
+.settings {
+	@extend .grid;
+	grid-auto-rows: 1fr;
+}
