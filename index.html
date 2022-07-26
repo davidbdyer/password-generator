@@ -1,22 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-
 	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0" />
 		<title>Password Generator</title>
+		<meta name="title" content="Password Generator" />
+		<meta name="description" content="A web app for generating complex passwords. Using HTML, SASS, and Javascript." />
 
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+		<!-- facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://davidbdyer.github.io/password-generator/" />
+		<meta property="og:title" content="Password Generator" />
+		<meta property="og:description" content="A web app for generating complex passwords. Using HTML, SASS, and Javascript." />
+		<meta property="og:image" content="https://davidbdyer.github.io/images/site-thumb.png" />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
+
+		<!-- Apple Touch Icon -->
+		<link rel="apple-touch-icon" href="images/icon.png" />
+
+		<!-- PNG Icon -->
+		<link rel="icon" type="image/png" href="images/icon.png" />
+
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
 			integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
 			crossorigin="anonymous" />
-		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/style.css" />
 
 		<script src="scripts/script.js" defer></script>
 	</head>
 
 	<body>
 		<div class="container">
-			<h1 class="heading" >Password Generator</h1>
+			<h1 class="heading">Password Generator</h1>
 
 			<div class="result-container">
 				<span id="result"></span>
@@ -28,35 +46,31 @@
 			<div class="settings">
 				<div class="setting">
 					<label for="length">Password Length</label>
-					<input id="length" type="number" name="length" min="4" max="20" value="20">
+					<input id="length" type="number" name="length" min="4" max="20" value="20" />
 				</div>
 				<div class="setting">
 					<label for="uppercase">Include uppercase</label>
-					<input type="checkbox" name="uppercase" id="uppercase" checked>
+					<input type="checkbox" name="uppercase" id="uppercase" checked />
 				</div>
 				<div class="setting">
 					<label for="lowercase">Include lowercase</label>
-					<input type="checkbox" name="uppercase" id="lowercase" checked>
+					<input type="checkbox" name="uppercase" id="lowercase" checked />
 				</div>
 				<div class="setting">
 					<label for="numbers">Include numbers</label>
-					<input type="checkbox" name="numbers" id="numbers" checked>
+					<input type="checkbox" name="numbers" id="numbers" checked />
 				</div>
 				<div class="setting">
 					<label for="symbols">Include symbols</label>
-					<input type="checkbox" name="symbols" id="symbols" checked>
+					<input type="checkbox" name="symbols" id="symbols" checked />
 				</div>
 			</div>
-			<button class="btn btn-large" id="generate">
-				Generate Password
-			</button>
+			<button class="btn btn-large" id="generate">Generate Password</button>
 		</div>
 
 		<dialog class="modal" id="copy-modal">
 			<p>Password copied to clipboard!</p>
-			<form method="dialog">
-			</form>
+			<form method="dialog"></form>
 		</dialog>
 	</body>
-
 </html>

@@ -1,3 +1,3 @@
 # password-generator
 
-A web app to generate a complex password. Using HTML, SASS, and Javascript.
+A web app for generating complex passwords. Using HTML, SASS, and Javascript.
