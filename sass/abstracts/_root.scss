@@ -12,11 +12,13 @@
 		--result-bg: white;
 		--text-clr: #2e526a;
 		--text-result-clr: var(--text-clr);
+		--shadow: rgb(0 0 0 / 0.2);
 	}
 
-	--bg-grad: linear-gradient(45deg, hsla(218, 100%, 10%, 1) 0%, hsla(185, 100%, 37%, 1) 100%);
-	--container-clr: #001333;
-	--result-bg: white;
-	--text-clr: #94dce3;
+	--bg-grad: linear-gradient(45deg, black 0%, #00286c 100%);
+	--container-clr: #2e526a;
+	--result-bg: var(--text-clr);
+	--text-clr: #e7ecef;
 	--text-result-clr: var(--container-clr);
+	--shadow: rgb(255 255 255 / 0.2);
 }
