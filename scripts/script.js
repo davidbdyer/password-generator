@@ -18,17 +18,21 @@ const randomFunc = {
 clipboardEl.addEventListener('click', async () => {
 	const password = resultEl.innerText;
 
+	const close = async () => {
+		await copyModalEl.close();
+		copyModalEl.style.animation = '';
+		copyModalEl.removeEventListener('animationend', close);
+	};
+
 	if (!password) {
 		return;
 	}
+
 	navigator.clipboard.writeText(password);
 	copyModalEl.showModal();
 	await sleep(2000);
 	copyModalEl.style.animation = 'fade-out 1s';
-	const close = () => {
-		copyModalEl.close();
-		copyModalEl.removeEventListener('animationend', close);
-	};
+
 	copyModalEl.addEventListener('animationend', close);
 });
 

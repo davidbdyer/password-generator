@@ -4,6 +4,12 @@ input[type='number'] {
 	text-align: center;
 }
 
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
 input[type='checkbox'] {
 	transform: scale(1.5) translateX(-30%);
 	accent-color: var(--accent-clr);
