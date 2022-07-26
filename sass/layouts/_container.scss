@@ -5,7 +5,7 @@
 	--gap: calc(var(--spacing) * 2);
 	@extend .grid;
 	width: max(22rem, 50vw);
-	max-width: 100%;
+	// max-width: 100%;
 	padding: clamp(1.25rem, 4vw, 4rem);
 	border-radius: var(--border-radius);
 	background-color: var(--container-clr);

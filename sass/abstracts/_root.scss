@@ -7,7 +7,7 @@
 	--spaceing-resp: clamp(1.25rem, 4vw, 4rem);
 
 	@media (prefers-color-scheme: light) {
-		--bg-grad: linear-gradient(45deg, hsla(204, 39%, 55%, 1) 0%, hsla(185, 100%, 78%, 1) 100%);
+		--bg-clr: #5F95B9;
 		--container-clr: #e7ecef;
 		--result-bg: white;
 		--text-clr: #2e526a;
@@ -15,7 +15,7 @@
 		--shadow: rgb(0 0 0 / 0.2);
 	}
 
-	--bg-grad: linear-gradient(45deg, black 0%, #00286c 100%);
+	--bg-clr: rgb(33, 33, 33);
 	--container-clr: #2e526a;
 	--result-bg: var(--text-clr);
 	--text-clr: #e7ecef;

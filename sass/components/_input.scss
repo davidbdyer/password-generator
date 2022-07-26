@@ -1,6 +1,9 @@
 @use '../abstracts' as *;
 
 input[type='number'] {
+	min-width: 2em;
+	border: 0;
+	border-radius: var(--border-radius);
 	text-align: center;
 }
 
@@ -10,10 +13,21 @@ input[type='number']::-webkit-outer-spin-button {
 	margin: 0;
 }
 
-input[type='checkbox'] {
-	transform: scale(1.5) translateX(-30%);
-	accent-color: var(--text-clr);
+input[type='range'] {
+	// accent-color: var(--text-clr);
+	order: 3;
+}
 
+input[type='checkbox'] {
+	color: var(--container-clr);
+
+	@supports (accent-color: var(--text-clr)) {
+		// accent-color: var(--text-clr);
+	}
+
+	@media (min-width: $md) {
+		transform: scale(1.5) translateX(-30%);
+	}
 	@media (min-width: $lg) {
 		transform: scale(2) translateX(-30%);
 	}

@@ -13,7 +13,7 @@
 }
 
 .result-container #result {
-	word-wrap: break-word;
+	overflow-wrap: anywhere;
 	max-width: calc(100% - 2.5rem);
 	height: 100%;
 	overflow-y: scroll;
