@@ -1,10 +1,12 @@
 .modal {
-	border: 0;
-	border-radius: var(--border-radius);
-	font-size: var(--heading-fs);
-	animation: fade-in 1s;
-	margin-top: 40%;
-	margin-inline: auto;
+	max-width: calc(100% - 1.25rem);
+	margin: auto;
 	padding: 4vw;
+	border-radius: var(--border-radius);
+	background-color: var(--container-clr);
+	background-color: var(--container-clr);
+	color: var(--text-clr);
+	font-size: var(--heading-fs);
 	text-align: center;
+	animation: fade-in 1s;
 }
