@@ -1,8 +1,10 @@
 .modal {
 	border: 0;
 	border-radius: var(--border-radius);
-	font-size: 2rem;
+	font-size: var(--heading-fs);
 	animation: fade-in 1s;
-	margin: auto;
-	padding: 2vw;
+	margin-top: 40%;
+	margin-inline: auto;
+	padding: 4vw;
+	text-align: center;
 }

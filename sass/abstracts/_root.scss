@@ -7,16 +7,16 @@
 	--spaceing-resp: clamp(1.25rem, 4vw, 4rem);
 
 	@media (prefers-color-scheme: light) {
-		--bg-clr: #6096ba;
+		--bg-grad: linear-gradient(45deg, hsla(204, 39%, 55%, 1) 0%, hsla(185, 100%, 78%, 1) 100%);
 		--container-clr: #e7ecef;
 		--result-bg: white;
-		--text-clr: #274c77;
+		--text-clr: #2e526a;
 		--text-result-clr: var(--text-clr);
 	}
 
-	--bg-clr: #586f7c;
-	--container-clr: #2f4550;
+	--bg-grad: linear-gradient(45deg, hsla(218, 100%, 10%, 1) 0%, hsla(185, 100%, 37%, 1) 100%);
+	--container-clr: #001333;
 	--result-bg: white;
-	--text-clr: #f4f4f9;
+	--text-clr: #94dce3;
 	--text-result-clr: var(--container-clr);
 }
