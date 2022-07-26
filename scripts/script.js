@@ -6,7 +6,7 @@ const numbersEl = document.getElementById('numbers');
 const symbolsEl = document.getElementById('symbols');
 const generateEl = document.getElementById('generate');
 const clipboardEl = document.getElementById('clipboard');
-const copyModalEl = document.getElementById('copy-modal');
+// const copyModalEl = document.getElementById('copy-modal');
 
 const randomFunc = {
 	lower: getRandomLower,
@@ -29,11 +29,11 @@ clipboardEl.addEventListener('click', async () => {
 	}
 
 	navigator.clipboard.writeText(password);
-	copyModalEl.showModal();
-	await sleep(2000);
-	copyModalEl.style.animation = 'fade-out 1s';
+	// copyModalEl.showModal();
+	// await sleep(2000);
+	// copyModalEl.style.animation = 'fade-out 1s';
 
-	copyModalEl.addEventListener('animationend', close);
+	// copyModalEl.addEventListener('animationend', close);
 });
 
 generateEl.addEventListener('click', () => {

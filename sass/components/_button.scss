@@ -11,6 +11,11 @@
 	cursor: pointer;
 }
 
+.btn:active {
+	opacity: .5;
+}
+
 .btn-large {
 	width: 100%;
 }
+
