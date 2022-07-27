@@ -85,7 +85,7 @@ generateEl.addEventListener('click', () => {
 	const hasSymbol = symbolsEl.checked;
 
 	password = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length);
-	resultEl.textContent = password;
+	resultEl.value = password;
 });
 
 const shuffleString = (string) => {
