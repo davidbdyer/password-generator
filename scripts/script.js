@@ -14,14 +14,49 @@ const randomFunc = {
 	symbol: getRandomSymbol,
 };
 
+const lengthKey = 'pw_gen_length';
+const upperKey = 'pw_gen_uppercase';
+const lowerKey = 'pw_gen_lowercase';
+const numberKey = 'pw_gen_numbers';
+const symbolKey = 'pw_gen_symbols';
+
+// setting local storage values
 lengthEl.addEventListener('change', () => {
-	localStorage.setItem('length', lengthEl.value);
+	localStorage.setItem(lengthKey, lengthEl.value);
 	lengthEl.nextElementSibling.value = lengthEl.value;
 });
 
+uppercaseEl.addEventListener('change', () => {
+	localStorage.setItem(upperKey, uppercaseEl.checked);
+});
+
+lowercaseEl.addEventListener('change', () => {
+	localStorage.setItem(lowerKey, lowercaseEl.checked);
+});
+
+numbersEl.addEventListener('change', () => {
+	localStorage.setItem(numberKey, numbersEl.checked);
+});
+
+symbolsEl.addEventListener('change', () => {
+	localStorage.setItem(symbolKey, symbolsEl.checked);
+});
+
+// get and apply local storage values
 window.addEventListener('load', () => {
-	lengthEl.value = localStorage.getItem('length');
+	lengthEl.value = localStorage.getItem(lengthKey);
 	lengthEl.nextElementSibling.value = lengthEl.value;
+
+	const isChecked = (elm, localStorKey) => {
+		if (localStorage.getItem(localStorKey) !== null) {
+			elm.checked = localStorage.getItem(localStorKey) == 'true' ? true : false;
+		}
+	};
+
+	isChecked(uppercaseEl, upperKey);
+	isChecked(lowercaseEl, lowerKey);
+	isChecked(numbersEl, numberKey);
+	isChecked(symbolsEl, symbolKey);
 });
 
 clipboardEl.addEventListener('click', async () => {
