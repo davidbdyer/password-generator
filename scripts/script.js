@@ -6,7 +6,6 @@ const numbersEl = document.getElementById('numbers');
 const symbolsEl = document.getElementById('symbols');
 const generateEl = document.getElementById('generate');
 const clipboardEl = document.getElementById('clipboard');
-// const copyModalEl = document.getElementById('copy-modal');
 
 const randomFunc = {
 	lower: getRandomLower,
@@ -14,6 +13,16 @@ const randomFunc = {
 	number: getRandomNumber,
 	symbol: getRandomSymbol,
 };
+
+lengthEl.addEventListener('change', () => {
+	localStorage.setItem('length', lengthEl.value);
+	lengthEl.nextElementSibling.value = lengthEl.value;
+});
+
+window.addEventListener('load', () => {
+	lengthEl.value = localStorage.getItem('length');
+	lengthEl.nextElementSibling.value = lengthEl.value;
+});
 
 clipboardEl.addEventListener('click', async () => {
 	const password = resultEl.innerText;
