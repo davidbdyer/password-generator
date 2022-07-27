@@ -20,6 +20,13 @@ const lowerKey = 'pw_gen_lowercase';
 const numberKey = 'pw_gen_numbers';
 const symbolKey = 'pw_gen_symbols';
 
+let password = '';
+
+// Utility Functions
+const sleep = (ms) => {
+	return new Promise((resolve) => setTimeout(resolve, ms));
+};
+
 // setting local storage values
 lengthEl.addEventListener('change', () => {
 	localStorage.setItem(lengthKey, lengthEl.value);
@@ -59,25 +66,15 @@ window.addEventListener('load', () => {
 	isChecked(symbolsEl, symbolKey);
 });
 
+//Copy To Clipboard
 clipboardEl.addEventListener('click', async () => {
-	const password = resultEl.innerText;
-
-	const close = async () => {
-		await copyModalEl.close();
-		copyModalEl.style.animation = '';
-		copyModalEl.removeEventListener('animationend', close);
-	};
-
 	if (!password) {
 		return;
 	}
 
 	navigator.clipboard.writeText(password);
-	// copyModalEl.showModal();
-	// await sleep(2000);
-	// copyModalEl.style.animation = 'fade-out 1s';
-
-	// copyModalEl.addEventListener('animationend', close);
+	resultEl.textContent = 'Copied!';
+	await setTimeout(() => {resultEl.textContent = password}, 1500);
 });
 
 generateEl.addEventListener('click', () => {
@@ -87,12 +84,9 @@ generateEl.addEventListener('click', () => {
 	const hasNumber = numbersEl.checked;
 	const hasSymbol = symbolsEl.checked;
 
-	resultEl.textContent = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length);
+	password = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length);
+	resultEl.textContent = password;
 });
-
-const sleep = (ms) => {
-	return new Promise((resolve) => setTimeout(resolve, ms));
-};
 
 const shuffleString = (string) => {
 	const array = string.split('');
