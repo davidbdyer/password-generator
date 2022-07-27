@@ -73,8 +73,8 @@ clipboardEl.addEventListener('click', async () => {
 	}
 
 	navigator.clipboard.writeText(password);
-	resultEl.textContent = 'Copied!';
-	await setTimeout(() => {resultEl.textContent = password}, 1500);
+	resultEl.value = 'Copied!';
+	await setTimeout(() => {resultEl.value = password}, 1500);
 });
 
 generateEl.addEventListener('click', () => {
