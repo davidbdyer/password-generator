@@ -132,7 +132,7 @@ function generatePassword(lower, upper, number, symbol, length) {
 	const typesArr = [{ lower }, { upper }, { number }, { symbol }].filter((item) => Object.values(item)[0]);
 
 	if (typesCount === 0) {
-		return 'select something';
+		return 'Select Something!';
 	}
 
 	for (let i = 0; i < length; i++) {
